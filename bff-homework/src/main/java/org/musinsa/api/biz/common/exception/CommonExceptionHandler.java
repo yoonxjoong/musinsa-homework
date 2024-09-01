@@ -23,4 +23,17 @@ public class CommonExceptionHandler {
 
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    @ResponseBody
+    public ResponseEntity<BaseResponse<String>> handleIllegalArgumentException(IllegalArgumentException ex) {
+        String errorMessage = ex.getMessage();
+
+        BaseResponse<String> errorResponse = new BaseResponse<>(
+                errorMessage != null ? errorMessage : "An unexpected error occurred",
+                HttpStatus.NO_CONTENT.value() // 204 No Content
+        );
+
+        return new ResponseEntity<>(errorResponse, HttpStatus.NO_CONTENT);
+    }
 }
