@@ -2,16 +2,14 @@ package org.musinsa.api.biz.controller;
 
 
 import org.musinsa.api.biz.common.BaseResponse;
-import org.musinsa.api.biz.dto.BrandDto;
 import org.musinsa.api.biz.dto.CategoryDto;
-import org.musinsa.api.biz.entity.Brand;
 import org.musinsa.api.biz.entity.Category;
-import org.musinsa.api.biz.request.BrandSaveRequest;
-import org.musinsa.api.biz.service.BrandService;
 import org.musinsa.api.biz.service.CategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@ package org.musinsa.api.biz.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
-import lombok.Getter;
 
 
 @Data
