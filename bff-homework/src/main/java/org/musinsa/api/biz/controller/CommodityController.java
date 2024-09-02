@@ -95,7 +95,7 @@ public class CommodityController {
      */
     // save
     @PostMapping("/")
-    public ResponseEntity<BaseResponse<String>> save(@RequestBody CommoditySaveRequest request) {
+    public ResponseEntity<BaseResponse<String>> save(@RequestBody @Validated CommoditySaveRequest request) {
         // 브랜드 검색
         Brand brand = brandService.get(request.getBrandAutoSn());
 

@@ -1,6 +1,6 @@
 package org.musinsa.api.biz.request;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import org.musinsa.api.biz.common.BaseEntity;
@@ -14,12 +14,13 @@ import java.math.BigDecimal;
 @Builder
 public class CommoditySaveRequest {
 
-    @NotBlank
+    @NotNull
     private Long brandAutoSn;
 
-    @NotBlank
+    @NotNull
     private Long categoryAutoSn;
 
+    @NotNull
     private BigDecimal price;
 
     private BaseEntity.UseYn useYn;
