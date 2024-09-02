@@ -88,6 +88,7 @@
 ### 프론드엔드
 1. **의존성 설치**:
     ```bash
+    cd musinsa-homework/fo-homework
     npm install
     ```
 
