@@ -61,7 +61,7 @@
 1. **프로젝트 클론**
    ```bash
    git clone https://github.com/yoonxjoong/musinsa-homework.git
-   cd bff-homework
+   cd musinsa-homework/bff-homework
    ```
    
 2. **의존성 설치**

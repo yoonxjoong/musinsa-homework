@@ -17,12 +17,13 @@ const handleSelection = (event) => {
       <h1 class="text-2xl font-bold">Welcome to My Musinsa Homework</h1>
       <nav class="space-x-4">
         <router-link to="/" class="text-white hover:text-gray-300">Home</router-link>
+        <router-link to="/commodity-list" class="text-white hover:text-gray-300">상품목록</router-link>
         <select
             v-model="selectedOption"
             @change="handleSelection"
             class="bg-blue-700 text-white border border-gray-600 rounded-md p-2"
         >
-          <option value="/" disabled>선택해주세요.</option> <!-- 기본값을 선택해주세요로 설정 -->
+          <option value="/" disabled>선택해주세요.</option>
           <option value="/lowest-price-by-category">카테고리별 저렴한 브랜드는?</option>
           <option value="/lowest-sum-price-by-brand">전부 구매하면 이 브랜드가 가장 저렴해요!</option>
           <option value="/lowest-and-highest-price-by-brand">카테고리별 브랜드 가격 차이는?</option>

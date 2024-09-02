@@ -20,6 +20,11 @@ const routes = [
         path: '/lowest-and-highest-price-by-brand',
         name: 'LowestAndHighestPriceByBrand',
         component: () => import('./views/LowestAndHighestPriceByBrand.vue')
+    },
+    {
+        path:'/commodity-list',
+        name: 'CommodityList',
+        component: () => import('./views/CommodityList.vue')
     }
 ];
 
