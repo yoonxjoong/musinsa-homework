@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import {ref, onMounted} from 'vue';
 import axiosInstance from '../axios.js';
 import CommodityComponent2 from "../components/CommodityComponent2.vue";
 import CommodityComponent from "../components/CommodityComponent.vue";
@@ -11,12 +11,17 @@ const brandNm = ref();
 onMounted(async () => {
   try {
     const response = await axiosInstance.get('/v1/commodity/lowest-sum-price-by-brand');
-    rows.value = response.data.data.commodities;
-    sumPrice.value = response.data.data.sumPrice.toLocaleString('ko-KR');
-    brandNm.value = response.data.data.brandNm;
+
+    if (response.status === 200) {
+      rows.value = response.data.data.commodities;
+      sumPrice.value = response.data.data.sumPrice.toLocaleString('ko-KR');
+      brandNm.value = response.data.data.brandNm;
+      return;
+    }
   } catch (error) {
-    alert('서버에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+    console.log(error);
   }
+  alert('서버에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
 });
 </script>
 
@@ -36,7 +41,7 @@ onMounted(async () => {
 
     <section class="bg-white p-6 rounded-lg shadow-md mb-8">
       <h2 class="text-xl font-semibold text-gray-800 mb-4">상품 리스트</h2>
-      <CommodityComponent2 :rows="rows" />
+      <CommodityComponent2 :rows="rows"/>
     </section>
   </div>
 </template>
