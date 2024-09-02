@@ -94,7 +94,7 @@ public class CommodityController {
      * @return
      */
     // save
-    @PostMapping("/save")
+    @PostMapping("/")
     public ResponseEntity<BaseResponse<String>> save(@RequestBody CommoditySaveRequest request) {
         // 브랜드 검색
         Brand brand = brandService.get(request.getBrandAutoSn());
@@ -127,7 +127,7 @@ public class CommodityController {
      * @param request 상품 정보
      * @return
      */
-    @PutMapping("/update/{commodityAutoSn}")
+    @PutMapping("/{commodityAutoSn}")
     public ResponseEntity<BaseResponse<String>> updateCommodity(@PathVariable UUID commodityAutoSn, @RequestBody @Validated CommoditySaveRequest request) {
         Commodity commodity = commodityService.get(commodityAutoSn);
         if (commodity == null) {
@@ -160,7 +160,7 @@ public class CommodityController {
      * @param commodityAutoSn 상품 번호
      * @return
      */
-    @DeleteMapping("/delete/{commodityAutoSn}")
+    @DeleteMapping("/{commodityAutoSn}")
     public ResponseEntity<BaseResponse<String>> deleteCommodity(@PathVariable UUID commodityAutoSn) {
         Commodity commodity = commodityService.get(commodityAutoSn);
 

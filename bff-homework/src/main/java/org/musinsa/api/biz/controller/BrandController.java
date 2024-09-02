@@ -39,7 +39,7 @@ public class BrandController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PostMapping("/save")
+    @PostMapping("/")
     public ResponseEntity<BaseResponse<String>> saveBrand(@RequestBody BrandSaveRequest request) {
 
         brandService.save(request.toBrand());
@@ -52,7 +52,7 @@ public class BrandController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PutMapping("/update/{brandAutoSn}")
+    @PutMapping("/{brandAutoSn}")
     public ResponseEntity<BaseResponse<String>> updateBrand(@PathVariable Long brandAutoSn, @RequestBody BrandSaveRequest request) {
         Brand brand = brandService.get(brandAutoSn);
         if (brand == null) {
@@ -70,7 +70,7 @@ public class BrandController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{brandAutoSn}")
+    @DeleteMapping("/{brandAutoSn}")
     public ResponseEntity<BaseResponse<String>> deleteBrand(@PathVariable Long brandAutoSn) {
         Brand brand = brandService.get(brandAutoSn);
         if (brand == null) {
