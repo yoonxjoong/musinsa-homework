@@ -19,7 +19,6 @@ onMounted(async () => {
 
 <template>
   <div class="p-6 bg-gray-50 min-h-screen">
-    <!-- Sum Price Display -->
     <section class="bg-white p-6 rounded-lg shadow-md mb-8">
       <h2 class="text-xl font-semibold text-gray-800 mb-4">총액</h2>
       <div class="mt-4 flex items-center justify-between">
