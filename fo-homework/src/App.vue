@@ -14,9 +14,10 @@ const handleSelection = (event) => {
 <template>
   <div class="bg-blue-600 text-white p-6 shadow-md">
     <div class="container mx-auto flex items-center justify-between">
-      <h1 class="text-2xl font-bold">Welcome to My Musinsa Homework</h1>
+      <router-link to="/" class="text-white hover:text-gray-300">
+        <h1 class="text-2xl font-bold">Welcome to My Musinsa Homework</h1>
+      </router-link>
       <nav class="space-x-4">
-        <router-link to="/" class="text-white hover:text-gray-300">Home</router-link>
         <router-link to="/commodity-list" class="text-white hover:text-gray-300">상품목록</router-link>
         <select
             v-model="selectedOption"
