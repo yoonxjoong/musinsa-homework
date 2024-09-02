@@ -1,9 +1,12 @@
 package org.musinsa.api.biz.request;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import org.musinsa.api.biz.common.BaseEntity;
 import org.musinsa.api.biz.entity.Brand;
+
 
 @Data
 @Builder
@@ -11,6 +14,7 @@ public class BrandSaveRequest {
     /**
      * 브랜드명
      */
+    @NotBlank
     private String name;
 
     /**

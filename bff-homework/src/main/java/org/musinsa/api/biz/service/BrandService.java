@@ -24,6 +24,11 @@ public class BrandService {
     }
 
     public void save(Brand brand) {
+        Brand existingBrand = brandRepository.findByName(brand.getName()).orElse(null);
+
+        if (existingBrand!= null) {
+            throw new IllegalArgumentException("brand already exists");
+        }
         brandRepository.save(brand);
     }
 

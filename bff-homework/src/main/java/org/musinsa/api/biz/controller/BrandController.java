@@ -8,6 +8,7 @@ import org.musinsa.api.biz.request.BrandSaveRequest;
 import org.musinsa.api.biz.service.BrandService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,7 +41,7 @@ public class BrandController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<BaseResponse<String>> saveBrand(@RequestBody BrandSaveRequest request) {
+    public ResponseEntity<BaseResponse<String>> saveBrand(@RequestBody @Validated BrandSaveRequest request) {
 
         brandService.save(request.toBrand());
 
