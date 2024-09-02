@@ -74,7 +74,13 @@
    mvn test
    ```
    
-4. **애플리케이션 실행**
+4. **프로젝트 컴파일**
+   -  QueryDsl 메타 모델 클래스 생성을 하기 위해 필요
+   ```bash
+   mvn compile
+   ```
+   
+5. **애플리케이션 실행**
    ```bash
    mvn spring-boot:run
    ```
