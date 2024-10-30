@@ -1,4 +1,4 @@
-# musinsa-homework
+# homework
 
 Java(Kotlin) Backend Engineer - 과제
 
