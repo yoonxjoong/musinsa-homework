@@ -1,6 +1,6 @@
 # musinsa-homework
 
-[MUSINSA] Java(Kotlin) Backend Engineer - 과제
+Java(Kotlin) Backend Engineer - 과제
 
 ## 프로젝트 개요
 
